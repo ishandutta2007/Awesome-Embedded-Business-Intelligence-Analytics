@@ -1,6 +1,6 @@
 # Awesome-Embedded-Business-Intelligence-Analytics
 
-# Top Embedded Business Intelligence & Analytics Ecosystem
+## Top Embedded Business Intelligence & Analytics Ecosystem
 
 **Curated List of SaaS Platforms & Open-Source GitHub Projects**  
 *Focused on White-Label Dashboards, Multi-Tenant RLS & Self-Hosted Embedding*  
