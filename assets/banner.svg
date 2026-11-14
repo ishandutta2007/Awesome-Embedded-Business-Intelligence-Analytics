@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="chartGrad1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.7" />
+    </linearGradient>
+    <linearGradient id="chartGrad2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="orbGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="60" />
+    </filter>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3" />
+      <circle cx="40" cy="40" r="1.5" fill="#38bdf8" fill-opacity="0.2" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(1deg); }
+    }
+    @keyframes pulseOrb {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.15); }
+    }
+    @keyframes barWave1 {
+      0%, 100% { height: 42px; y: 318px; }
+      50% { height: 75px; y: 285px; }
+    }
+    @keyframes barWave2 {
+      0%, 100% { height: 95px; y: 265px; }
+      50% { height: 50px; y: 310px; }
+    }
+    @keyframes barWave3 {
+      0%, 100% { height: 60px; y: 300px; }
+      50% { height: 110px; y: 250px; }
+    }
+    @keyframes barWave4 {
+      0%, 100% { height: 85px; y: 275px; }
+      50% { height: 45px; y: 315px; }
+    }
+    @keyframes pulseDot {
+      0%, 100% { r: 3.5px; opacity: 0.6; }
+      50% { r: 6px; opacity: 1; }
+    }
+    @keyframes dashMove {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -40; }
+    }
+    .floating-card {
+      animation: floatSlow 7s ease-in-out infinite;
+    }
+    .pulsing-orb-1 {
+      animation: pulseOrb 6s ease-in-out infinite alternate;
+      transform-origin: 200px 100px;
+    }
+    .pulsing-orb-2 {
+      animation: pulseOrb 8s ease-in-out infinite alternate;
+      transform-origin: 1050px 320px;
+    }
+    .dash-line {
+      stroke-dasharray: 6 6;
+      animation: dashMove 3s linear infinite;
+    }
+  </style>
+
+  <!-- Deep Background -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" />
+
+  <!-- Background Animated Glowing Orbs (Kept safely at background) -->
+  <circle class="pulsing-orb-1" cx="200" cy="100" r="180" fill="#38bdf8" filter="url(#orbGlow)" opacity="0.3" />
+  <circle class="pulsing-orb-2" cx="1020" cy="300" r="220" fill="#8b5cf6" filter="url(#orbGlow)" opacity="0.25" />
+  <circle cx="600" cy="210" r="280" fill="#06b6d4" filter="url(#orbGlow)" opacity="0.1" />
+
+  <!-- Perspective Mesh Grid -->
+  <rect width="1200" height="420" fill="url(#grid)" />
+
+  <!-- DYNAMIC EMBEDDED DASHBOARD WIREFRAME (Right Side / Background Accent) -->
+  <g class="floating-card" opacity="0.88">
+    <!-- Main Embedded Frame Card -->
+    <rect x="800" y="55" width="345" height="235" rx="16" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.4" filter="url(#cardShadow)"/>
+    
+    <!-- Window Header -->
+    <rect x="800" y="55" width="345" height="34" rx="16" fill="#0f172a" fill-opacity="0.8" />
+    <circle cx="822" cy="72" r="5" fill="#f43f5e" />
+    <circle cx="838" cy="72" r="5" fill="#f59e0b" />
+    <circle cx="854" cy="72" r="5" fill="#10b981" />
+    <text x="872" y="76" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">tenant_app/analytics/embed</text>
+
+    <!-- Mini Metric Cards -->
+    <rect x="818" y="103" width="95" height="52" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="828" y="122" fill="#94a3b8" font-family="sans-serif" font-size="9" font-weight="500">ARR Stream</text>
+    <text x="828" y="144" fill="#38bdf8" font-family="sans-serif" font-size="16" font-weight="700">$2.4M</text>
+
+    <rect x="925" y="103" width="95" height="52" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="935" y="122" fill="#94a3b8" font-family="sans-serif" font-size="9" font-weight="500">Active Tenants</text>
+    <text x="935" y="144" fill="#a78bfa" font-family="sans-serif" font-size="16" font-weight="700">1,840</text>
+
+    <rect x="1032" y="103" width="95" height="52" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="1042" y="122" fill="#94a3b8" font-family="sans-serif" font-size="9" font-weight="500">RLS Latency</text>
+    <text x="1042" y="144" fill="#34d399" font-family="sans-serif" font-size="16" font-weight="700">12ms</text>
+
+    <!-- Dynamic Animated Chart Bars -->
+    <rect x="830" width="22" rx="4" fill="url(#chartGrad1)" style="animation: barWave1 3.5s ease-in-out infinite;" />
+    <rect x="862" width="22" rx="4" fill="url(#chartGrad2)" style="animation: barWave2 3.8s ease-in-out infinite;" />
+    <rect x="894" width="22" rx="4" fill="url(#chartGrad1)" style="animation: barWave3 4.2s ease-in-out infinite;" />
+    <rect x="926" width="22" rx="4" fill="url(#chartGrad2)" style="animation: barWave4 3.6s ease-in-out infinite;" />
+    <rect x="958" width="22" rx="4" fill="url(#chartGrad1)" style="animation: barWave2 4.0s ease-in-out infinite;" />
+    <rect x="990" width="22" rx="4" fill="url(#chartGrad2)" style="animation: barWave1 3.9s ease-in-out infinite;" />
+    <rect x="1022" width="22" rx="4" fill="url(#chartGrad1)" style="animation: barWave3 4.4s ease-in-out infinite;" />
+    <rect x="1054" width="22" rx="4" fill="url(#chartGrad2)" style="animation: barWave4 3.7s ease-in-out infinite;" />
+    <rect x="1086" width="22" rx="4" fill="url(#chartGrad1)" style="animation: barWave2 4.1s ease-in-out infinite;" />
+    
+    <!-- Sparkline overlay -->
+    <path d="M 841 230 Q 910 185 969 220 T 1097 185" fill="none" stroke="#f43f5e" stroke-width="2.5" />
+    <circle cx="1097" cy="185" r="4.5" fill="#f43f5e" style="animation: pulseDot 2s infinite;" />
+  </g>
+
+  <!-- Connective Data Pipeline Streams (Subtle) -->
+  <path class="dash-line" d="M 500 340 L 780 340 L 800 240" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.35" />
+  <circle cx="500" cy="340" r="4" fill="#38bdf8" />
+  <circle cx="780" cy="340" r="4" fill="#818cf8" />
+
+  <!-- FOREGROUND: TITLE & VALUE PROPOSITION (Guaranteed Pristine Foreground) -->
+  <g id="foreground-content">
+    <!-- Top Category Tag -->
+    <g transform="translate(70, 68)">
+      <rect x="0" y="0" width="290" height="32" rx="16" fill="#1e293b" fill-opacity="0.9" stroke="#38bdf8" stroke-width="1.2" />
+      <circle cx="16" cy="16" r="5" fill="#38bdf8" style="animation: pulseDot 2s infinite;" />
+      <text x="32" y="21" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">CURATED ECOSYSTEM • 2026</text>
+    </g>
+
+    <!-- Main Title with Gradient -->
+    <text x="70" y="152" fill="url(#primaryGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="-1.2" filter="url(#glow)">Awesome Embedded BI &amp; Analytics</text>
+    <!-- Sharp crisp overlay on top of glow -->
+    <text x="70" y="152" fill="url(#primaryGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="-1.2">Awesome Embedded BI &amp; Analytics</text>
+
+    <!-- Subtitle -->
+    <text x="70" y="196" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" letter-spacing="-0.3">
+      The Developer's Compass to White-Label Dashboards, Multi-Tenant RLS &amp; Semantic Layers
+    </text>
+
+    <!-- Tagline description -->
+    <text x="70" y="228" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="400">
+      Enterprise SaaS platforms vs. open-source self-hosted engines. Zero per-seat fee alternatives.
+    </text>
+
+    <!-- Feature Pills / Badges in Foreground -->
+    <g transform="translate(70, 272)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="138" height="34" rx="8" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+        <text x="14" y="22" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="700">⚡ Multi-Tenant RLS</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(150, 0)">
+        <rect x="0" y="0" width="148" height="34" rx="8" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+        <text x="14" y="22" fill="#818cf8" font-family="sans-serif" font-size="13" font-weight="700">🎨 White-Label SDKs</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(310, 0)">
+        <rect x="0" y="0" width="148" height="34" rx="8" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+        <text x="14" y="22" fill="#a78bfa" font-family="sans-serif" font-size="13" font-weight="700">🌐 Semantic Layers</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(470, 0)">
+        <rect x="0" y="0" width="138" height="34" rx="8" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+        <text x="14" y="22" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="700">🔓 100% Free OSS</text>
+      </g>
+    </g>
+
+    <!-- Bottom Metadata stats line -->
+    <g transform="translate(70, 345)">
+      <text x="0" y="16" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="500">
+        📊 <tspan fill="#94a3b8" font-weight="600">10 SaaS Platforms</tspan> Analyzed • 🚀 <tspan fill="#94a3b8" font-weight="600">8+ Open-Source Engines</tspan> • 🛡️ Zero Per-Seat Licensing Guides
+      </text>
+    </g>
+  </g>
+</svg>
