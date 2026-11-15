@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awememe-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Embedded-Business-Intelligence-Analytics/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Embedded-Business-Intelligence-Analytics?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Embedded-Business-Intelligence-Analytics/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Embedded-Business-Intelligence-Analytics?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Embedded-Business-Intelligence-Analytics/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Embedded-Business-Intelligence-Analytics?style=social" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Embedded-Business-Intelligence-Analytics/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Embedded-Business-Intelligence-Analytics?style=flat-square&color=blue" alt="License" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -71,9 +71,9 @@ The global embedded analytics and business intelligence market is estimated betw
 
 ## 🔓 Open-Source GitHub Projects
 
-All open-source repositories below are sorted in **descending order by GitHub star count**. Each badge links directly to the repository's stargazers page.
+All open-source repositories below are sorted in **descending order by GitHub Stars_Count**. Each badge links directly to the repository's stargazers page.
 
-| 📦 Project | ⭐ Stars | 🛠️ Architecture & Focus | 📖 Description |
+| 📦 Project | ⭐ GitHub_Stars | 🛠️ Architecture & Focus | 📖 Description |
 |---|---|---|---|
 | **[Apache Superset](https://github.com/apache/superset)** | [![Stars](https://img.shields.io/github/stars/apache/superset?style=social&color=white)](https://github.com/apache/superset/stargazers) | Full BI Engine / SDK Embedding | **The premier open-source enterprise BI engine for embedding and white-labeling.** **Zero software licensing fees**—pay only for compute infrastructure. Features deep SQL flexibility, Jinja templating, pluggable React visualization plugins, and connectors to dozens of SQL databases. **Supports iframe, React SDK, and REST API-driven embedding** with robust row-level security (RLS). Requires DevOps/engineering for custom theming and multi-tenant isolation, but completely eliminates per-viewer seat taxation. |
 | **[Metabase](https://github.com/metabase/metabase)** | [![Stars](https://img.shields.io/github/stars/metabase/metabase?style=social&color=white)](https://github.com/metabase/metabase/stargazers) | Friendly BI / Visual Question Builder | **The fastest open-source path to operational dashboards and intuitive data exploration.** The open-source core is free for unlimited internal users, but interactive signed embedding, SSO, multi-tenancy, and full white-labeling require the paid Pro/Enterprise plan. Ideal for teams wanting rapid self-serve internal dashboards today while evaluating commercial tiers for external product embedding. |
@@ -112,7 +112,7 @@ We welcome community contributions, corrections, and new entries! 🤝
 
 1. 🍴 **Fork the repository** on GitHub.
 2. ✍️ **Add or edit entries** in `README.md` following the existing format.
-3. 📋 **Include complete data**: Product name, official link, 1–2 sentence factual summary, transparent pricing floor, free plan/trial limits, company size, or open-source star badge (`style=social&color=white`).
+3. 📋 **Include complete data**: Product name, official link, 1–2 sentence factual summary, transparent pricing floor, free plan/trial limits, company size, or open-source Stars_Badge (`style=social&color=white`).
 4. 🚀 **Submit a Pull Request** with a clear summary of your additions.
 
 ---
